@@ -20,6 +20,7 @@ body {
     font-size: 100px;
     font-weight: bold;
     color: white;            
+    opacity: 0.0;
 }
 
 .number_item:hover {

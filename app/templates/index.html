@@ -7,17 +7,17 @@
     <script src="{% static 'functions.js' %}"></script>
     <title>Divisors</title>
   </head>
-  <body>
+  <body onload="show_number('list');">
       <main>
           <div class="number_form">
-            <form method="post"></form>
+            <form action="{% url 'index' %}" method="post">
             {% csrf_token %}        
             <label for="number">Give number to compute divisors</label><br>            
             <input type="number" id="number" name="number" min="1" max="2000000000"><br>
-            <input type="submit" onclick="show_number('divisor1')" value="Compute divisors">
+            <input type="submit" value="Compute divisors">
             </form>
-          </div>        
-          <div class = "numbers_list">
+          </div>       
+          <div class = "numbers_list" id="list">
             {% for d in divisors %}        
             <label class = "number_item" id="divisor{{ forloop.counter }}">{{ d }}</label>
             {% endfor %}
