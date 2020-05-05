@@ -1,31 +1,20 @@
 from django.shortcuts import render
 from django.http import Http404
 
+import sys
+sys.path.append(sys.path[0] + "/bin")
+
+import divisors
+
 def index(request):
     try:
         num = request.POST['number']
-        divisiors = compute_divisiors(int(num))
+        divisiors_list = compute_divisiors(int(num))
     except(KeyError, ValueError):
         num = 0
-        divisiors = []    
-    context = {'divisors': divisiors, 'number': num}
+        divisiors_list = []    
+    context = {'divisors': divisiors_list, 'number': num}
     return render(request, 'index.html', context)
 
-import math
 def compute_divisiors(n):
-    nums = []
-
-    i = int(math.sqrt(n))
-    while i > 0: 
-          
-        if (n % i == 0) : 
-              
-            # If divisors are equal, print only one 
-            if (n / i == i) : 
-                nums.append(i), 
-            else : 
-                # Otherwise print both 
-                nums.append(i)
-                nums.append(int(n/i)), 
-        i = i - 1
-    return nums
+    return divisors.compute_divisors(n)

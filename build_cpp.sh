@@ -3,8 +3,8 @@
 mkdir -p build && cd build
 cmake ../cpp/
 cmake --build .
-cp *.so ../bin/
+cp libdivisors.so ../bin/divisors.so
 cd ..
-#rm -rf build
+rm -rf build
 
 

@@ -22,7 +22,7 @@
           <p id="divisors_header">divisors of {{ number }}</p>
           {% endif %}          
             {% for d in divisors %}                    
-            <label class = "number_item" id="divisor{{ forloop.counter }}">{{ d }}</label>
+            <span class = "number_item" id="divisor{{ forloop.counter }}">{{ d }}</span>
             {% endfor %}
           </div>       
       </main>

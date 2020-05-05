@@ -9,7 +9,7 @@ open_site()(
 )
 
 # compile c++
-if [ ! -f "./bin/libdivisors.so" ]; then
+if [ ! -f "./bin/divisors.so" ]; then
     ./build_cpp.sh
 fi
 
