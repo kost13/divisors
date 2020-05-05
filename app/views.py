@@ -14,9 +14,6 @@ def index(request):
 import math
 def compute_divisiors(n):
     nums = []
-    # for i in range(num):
-    #     nums.append(i)
-    # return nums
 
     i = int(math.sqrt(n))
     while i > 0: 
