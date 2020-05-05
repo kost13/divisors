@@ -14,7 +14,7 @@ std::vector<int> get_divisors(int num){
     while(i > 0){
         if(num % i == 0){
             divisors.push_back(i);
-            auto other = static_cast<int>(num / i);
+            auto other = num / i;
             if(other != i){
                 divisors.push_back(other);
             } 

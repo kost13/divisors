@@ -7,7 +7,7 @@
     <script src="{% static 'functions.js' %}"></script>
     <title>Divisors</title>
   </head>
-  <body onload="show_number('list');">
+  <body onload="initialize_divisors({{ divisors }}, {{ number }});">
       <main>
           <div class="number_form">
             <form action="{% url 'index' %}" method="post">
