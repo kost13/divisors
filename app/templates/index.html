@@ -12,13 +12,16 @@
           <div class="number_form">
             <form action="{% url 'index' %}" method="post">
             {% csrf_token %}        
-            <label for="number">Give number to compute divisors</label><br>            
+            <label for="number">give number to compute divisors</label><br>            
             <input type="number" id="number" name="number" min="1" max="2000000000"><br>
             <input type="submit" value="Compute divisors">
             </form>
-          </div>       
+          </div>    
           <div class = "numbers_list" id="list">
-            {% for d in divisors %}        
+          {% if number %}   
+          <p id="divisors_header">divisors of {{ number }}</p>
+          {% endif %}          
+            {% for d in divisors %}                    
             <label class = "number_item" id="divisor{{ forloop.counter }}">{{ d }}</label>
             {% endfor %}
           </div>       

@@ -5,6 +5,6 @@ cmake ../cpp/
 cmake --build .
 cp *.so ../bin/
 cd ..
-rm -rf build
+#rm -rf build
 
 
