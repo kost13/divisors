@@ -1,7 +1,14 @@
+"""divisors_site view configuration
+"""
 from django.shortcuts import render
 import divisors
 
 def index(request):
+    """
+    Generates the main page. If the request contains a number,
+    its dividors are computed and displayed. Otherwise only a 
+    form to enter the number is displayed.
+    """
     try:
         num = request.POST['number']
         divisiors_list = compute_divisiors(int(num))

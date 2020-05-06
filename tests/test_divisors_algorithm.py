@@ -3,6 +3,11 @@ from django.test import SimpleTestCase
 import divisors
 
 class DivisorsAlgorithmTest(SimpleTestCase):
+    """
+    Divisors algorithm test checks if the divisors are
+    computed correctly.
+    """
+
     def test_normal_16(self):
         expect = [4, 2, 8, 1, 16]
         ret = divisors.compute_divisors(16)

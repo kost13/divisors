@@ -13,8 +13,6 @@ SECRET_KEY = ')0d3=o64e*@r&4v_&dqrlcp6$cv4i6cy3vnzzk@r)f%cw@b#^o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
-
 INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
