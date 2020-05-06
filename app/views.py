@@ -1,10 +1,5 @@
 from django.shortcuts import render
 
-import sys
-bin_path = sys.path[0] + "/bin"
-if bin_path not in sys.path:
-    sys.path.append(bin_path)
-
 import divisors
 
 def index(request):

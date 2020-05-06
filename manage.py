@@ -3,8 +3,14 @@
 import os
 import sys
 
+def add_divisors_to_path():    
+    bin_path = os.path.dirname(os.path.abspath(__file__)) + "/bin"
+    if not bin_path in sys.path:
+        sys.path.append(bin_path)
+
 
 def main():
+    add_divisors_to_path()
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'divisors_site.settings')
     try:
         from django.core.management import execute_from_command_line

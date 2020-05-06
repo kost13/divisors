@@ -1,10 +1,5 @@
 from django.test import SimpleTestCase
 
-import sys
-bin_path = sys.path[0] + "/bin"
-if bin_path not in sys.path:
-    sys.path.append(bin_path)
-
 import divisors
 
 class DivisorsAlgorithmTest(SimpleTestCase):
