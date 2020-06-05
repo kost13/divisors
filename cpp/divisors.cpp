@@ -1,3 +1,6 @@
+//project: Divisors
+//author: Lukasz Kostrzewa
+
 #include <vector>
 
 #define BOOST_PYTHON_STATIC_LIB
@@ -7,26 +10,26 @@
 
 namespace py = boost::python;
 
+/// compute divisors for the given number
 std::vector<int> get_divisors(int num){
     if(num < 1){
         return {};
     }
 
     std::vector<int> divisors;
-    auto i = static_cast<int>(sqrt(num));
-    while(i > 0){
+    for(int i = static_cast<int>(sqrt(num)); i > 0; --i ){
         if(num % i == 0){
             divisors.push_back(i);
             auto other = num / i;
             if(other != i){
                 divisors.push_back(other);
             } 
-        }
-        --i;        
+        }        
     }
     return divisors;
 }
 
+/// convert standard vector to python list
 py::list vec_to_py_list(const std::vector<int> &v){
     py::list l;
     for(auto n : v){
@@ -35,6 +38,7 @@ py::list vec_to_py_list(const std::vector<int> &v){
     return l;
 }
 
+/// divisors computations adjusted to python
 py::list compute_divisors(int num){
     return vec_to_py_list(get_divisors(num));
 }

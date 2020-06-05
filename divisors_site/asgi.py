@@ -1,3 +1,6 @@
+# project: Divisors
+# author: Lukasz Kostrzewa
+
 """
 ASGI config for divisors_site project.
  exposes the ASGI callable as a module-level variable named ``application``.

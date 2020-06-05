@@ -1,3 +1,6 @@
+# project: Divisors
+# author: Lukasz Kostrzewa
+
 """
 WSGI config for divisors_site project.
 It exposes the WSGI callable as a module-level variable named ``application``.

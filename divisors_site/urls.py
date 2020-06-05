@@ -1,3 +1,6 @@
+# project: Divisors
+# author: Lukasz Kostrzewa
+
 """divisors_site URL Configuration
 """
 

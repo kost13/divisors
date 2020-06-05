@@ -2,8 +2,6 @@ cmake_minimum_required(VERSION 3.0)
 
 project(divisors)
 
-#set(CMAKE_C_COMPILER gcc)
-#set(CMAKE_CXX_COMPILER g++)
 
 if(NOT DEFINED Boost_INCLUDE_DIRS OR NOT DEFINED Boost_PYTHON36_LIBRARY)
     message(STATUS "No boost paths defined, searching for default")

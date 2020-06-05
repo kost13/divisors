@@ -1,3 +1,6 @@
+# project: Divisors
+# author: Lukasz Kostrzewa
+
 from django.test import SimpleTestCase
 from django.test import Client
 from django.test.utils import setup_test_environment

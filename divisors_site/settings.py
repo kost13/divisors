@@ -1,3 +1,6 @@
+# project: Divisors
+# author: Lukasz Kostrzewa
+
 """
 Django settings for divisors_site project.
 """

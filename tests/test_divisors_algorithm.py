@@ -1,3 +1,6 @@
+# project: Divisors
+# author: Lukasz Kostrzewa
+
 from django.test import SimpleTestCase
 
 import divisors

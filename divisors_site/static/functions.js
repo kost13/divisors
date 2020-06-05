@@ -1,3 +1,5 @@
+//project: Divisors
+//author: Lukasz Kostrzewa
 
 const hovered_number_color_pair = 'wheat'
 const hovered_number_color_single = '#b6dc9a'
